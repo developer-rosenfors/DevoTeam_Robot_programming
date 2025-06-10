@@ -88,3 +88,64 @@ Acknowledgments
 Hat tip to anyone whose code was used
 Inspiration
 etc
+
+# Robot Controller - C# Solution
+
+## Overview
+This project implements a **robot controller** that navigates in a **grid-based room** following commands:
+- **L** (Turn Left)
+- **R** (Turn Right)
+- **F** (Move Forward)
+
+## Setup Instructions
+### Prerequisites:
+- **Visual Studio** (.NET 6 or later)
+- **xUnit** for unit testing
+
+### How to Run:
+1. Clone the repository:
+git clone <repository-url> cd RobotController
+
+2. Open **Visual Studio** and load the solution.
+3. Run `RobotController.sln` to execute the robot controller.
+4. Enter:
+- **Room Size** → `"5 5"`
+- **Start Position** → `"1 2 N"`
+- **Commands** → `"RFRFFRFRF"`
+5. View the final **robot position**.
+
+### Running Unit Tests
+1. Open the test project in **Visual Studio**.
+2. Run:
+dotnet test
+
+3. Ensure **all tests pass**.
+
+## Git Repository Structure
+- `/src` - Main application code
+- `/tests` - Unit tests
+- `README.md` - Instructions & setup guide
+
+## Possible Enhancements
+🔹 **Logging Mechanism** for debugging  
+🔹 **Graphical Interface** for visualization  
+🔹 **More Test Cases** for edge scenarios  
+
+---
+
+### **5. Git Setup Instructions**
+```sh
+# Initialize Git in your project directory
+git init
+
+# Add files to the repository
+git add .
+
+# Commit the initial implementation
+git commit -m "Initial commit - Robot Controller"
+
+# Create a GitHub repository and add the remote
+git remote add origin <repository-url>
+
+# Push the code to GitHub
+git push -u origin main
