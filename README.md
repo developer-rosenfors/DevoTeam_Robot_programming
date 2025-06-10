@@ -1,13 +1,14 @@
 # DevoTeam_Robot_programming
 
 Project Title
-One Paragraph of project description goes here
+DevoTeam Robot programming
 
 Getting Started
+Download and build at your local system.
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 Prerequisites
-What things you need to install the software and how to install them
+Visual Studio 2022
 
 Give examples
 Installing
