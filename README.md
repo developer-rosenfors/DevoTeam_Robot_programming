@@ -31,8 +31,7 @@ Give an example
 And coding style tests
 Explain what these tests test and why
 //
-Your task is to program the controller to a robot. It’s a simple robot that can
-walk around in a room where the floor is represented as a number of fields in a
+It’s a simple robot that can walk around in a room where the floor is represented as a number of fields in a
 wire mesh. Input is first two numbers, which tells the robot how big the room is:
 5 7
 Which means that the room is 5 fields wide and is 7 fields deep.
