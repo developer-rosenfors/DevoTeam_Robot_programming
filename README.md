@@ -1,7 +1,24 @@
-# DevoTeam_Robot_programming
-
 Project Title
-DevoTeam Robot programming
+# DevoTeam_Robot_programming C# Solution
+
+## Overview
+This project implements a **robot controller** that navigates in a **grid-based room** following commands:
+- **L** (Turn Left)
+- **R** (Turn Right)
+- **F** (Move Forward)
+
+## Setup Instructions
+### Prerequisites:
+- **Visual Studio** (.NET 6 or later)
+- **xUnit** for unit testing
+
+
+
+
+
+
+
+
 
 Getting Started
 Download and build at your local system.
@@ -89,18 +106,6 @@ Hat tip to anyone whose code was used
 Inspiration
 etc
 
-# Robot Controller - C# Solution
-
-## Overview
-This project implements a **robot controller** that navigates in a **grid-based room** following commands:
-- **L** (Turn Left)
-- **R** (Turn Right)
-- **F** (Move Forward)
-
-## Setup Instructions
-### Prerequisites:
-- **Visual Studio** (.NET 6 or later)
-- **xUnit** for unit testing
 
 ### How to Run:
 1. Clone the repository:
