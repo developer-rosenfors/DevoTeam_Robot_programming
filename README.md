@@ -12,43 +12,61 @@ This project implements a **robot controller** that navigates in a **grid-based 
 - **Visual Studio** (.NET 6 or later)
 - **xUnit** for unit testing
 
-
-
-
-
-
-
-
-
-Getting Started
+## Getting Started
 Download and build at your local system.
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and 
+testing purposes. 
 
-Prerequisites
-Visual Studio 2022
+### How to Run:
+1. Clone the repository:
+git clone <repository-url> cd DevoTeam_Robot_programming
 
-Give examples
-Installing
-A step by step series of examples that tell you how to get a development env running
+2. Open **Visual Studio** and load the solution.
+3. Run `DevoTeam_Robot_programming.sln` to execute the robot controller.
+4. Enter:
+- **Room Size** → `"5 5"`
+- **Start Position** → `"1 2 N"`
+- **Commands** → `"RFRFFRFRF"`
+5. View the final **robot position**.
 
-Say what the step will be
+### Running Unit Tests
+1. Open the test project in **Visual Studio**.
+2. Run:
+dotnet test
+3. Ensure **all tests pass**.
 
-Give the example
-And repeat
+## Git Repository Structure
+- `/src` - Main application code
+- `/tests` - Unit tests
+- `README.md` - Instructions & setup guide
 
-until finished
-End with an example of getting some data out of the system or using it for a little demo
+## Possible Enhancements
+🔹 **Logging Mechanism** for debugging  
+🔹 **Graphical Interface** for visualization  
+🔹 **More Test Cases** for edge scenarios  
 
-Running the tests
-Explain how to run the automated tests for this system
+### **5. Git Setup Instructions**
+```sh
+# Initialize Git in your project directory
+git init
 
-Break down into end to end tests
-Explain what these tests test and why
+# Add files to the repository
+git add .
 
-Give an example
-And coding style tests
-Explain what these tests test and why
-//
+# Commit the initial implementation
+git commit -m "Initial commit - Robot Controller"
+
+# Create a GitHub repository and add the remote
+git remote add origin <repository-url>
+
+# Push the code to GitHub
+git push -u origin main
+
+
+
+
+
+
 It’s a simple robot that can walk around in a room where the floor is represented as a number of fields in a
 wire mesh. Input is first two numbers, which tells the robot how big the room is:
 5 7
@@ -80,77 +98,8 @@ RFLFFLRF
 Report: 3 1 E
 
 
-Give an example
-Deployment
-Add additional notes about how to deploy this on a live system
-
-Built With
-Dropwizard - The web framework used
-Maven - Dependency Management
-ROME - Used to generate RSS Feeds
-Contributing
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
-
-Versioning
-We use SemVer for versioning. For the versions available, see the tags on this repository.
-
-Authors
-Billie Thompson - Initial work - PurpleBooth
-See also the list of contributors who participated in this project.
-
-License
-This project is licensed under the MIT License - see the LICENSE.md file for details
-
-Acknowledgments
-Hat tip to anyone whose code was used
-Inspiration
-etc
 
 
-### How to Run:
-1. Clone the repository:
-git clone <repository-url> cd RobotController
 
-2. Open **Visual Studio** and load the solution.
-3. Run `RobotController.sln` to execute the robot controller.
-4. Enter:
-- **Room Size** → `"5 5"`
-- **Start Position** → `"1 2 N"`
-- **Commands** → `"RFRFFRFRF"`
-5. View the final **robot position**.
 
-### Running Unit Tests
-1. Open the test project in **Visual Studio**.
-2. Run:
-dotnet test
 
-3. Ensure **all tests pass**.
-
-## Git Repository Structure
-- `/src` - Main application code
-- `/tests` - Unit tests
-- `README.md` - Instructions & setup guide
-
-## Possible Enhancements
-🔹 **Logging Mechanism** for debugging  
-🔹 **Graphical Interface** for visualization  
-🔹 **More Test Cases** for edge scenarios  
-
----
-
-### **5. Git Setup Instructions**
-```sh
-# Initialize Git in your project directory
-git init
-
-# Add files to the repository
-git add .
-
-# Commit the initial implementation
-git commit -m "Initial commit - Robot Controller"
-
-# Create a GitHub repository and add the remote
-git remote add origin <repository-url>
-
-# Push the code to GitHub
-git push -u origin main
