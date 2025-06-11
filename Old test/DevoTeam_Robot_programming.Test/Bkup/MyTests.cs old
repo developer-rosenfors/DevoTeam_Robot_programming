@@ -1,0 +1,13 @@
+using Xunit;
+using DevoTeam_Robot_programming.Models; // Add the correct namespace for the Robot class
+
+public class MyTests
+{
+    [Fact]
+    public void MyTestMethod()
+    {
+        Robot robot = new Robot(1, 2, 'N', 5, 5);
+        string result = robot.ExecuteCommands("RFRFFRFRF");
+        Assert.Equal("Report: 1 3 N", result);
+    }
+}

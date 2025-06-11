@@ -1,7 +1,6 @@
 ﻿using System;
 
-namespace DevoTeam_Robot_programming
-
+namespace DevoTeamRobot
 {
     class Robot
     {
