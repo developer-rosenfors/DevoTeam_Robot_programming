@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # DevoTeam Robot Programming
 
 A C# solution for simulating a robot moving on a 2D grid, with robust movement logic and error handling. The robot can turn left/right, move forward, and reports its position and direction. The project includes unit tests for all core behaviors.
@@ -29,6 +30,76 @@ Use __Build Solution__ (`Ctrl+Shift+B`).
 - Click __Run All__
 
 ## Usage Example
+=======
+Project Title
+# DevoTeam_Robot_programming C# Solution
+
+## Overview
+This project implements a **robot controller** that navigates in a **grid-based room** following commands:
+- **L** (Turn Left)
+- **R** (Turn Right)
+- **F** (Move Forward)
+
+## Setup Instructions
+### Prerequisites:
+- **Visual Studio** (.NET 6 or later)
+- **xUnit** for unit testing
+
+## Getting Started
+Download and build at your local system.
+These instructions will get you a copy of the project up and running on your local machine for development and 
+testing purposes. 
+
+### How to Run:
+1. Clone the repository:
+git clone <repository-url> cd DevoTeam_Robot_programming
+
+2. Open **Visual Studio** and load the solution.
+3. Run `DevoTeam_Robot_programming.sln` to execute the robot controller.
+4. Enter:
+- **Room Size** → `"5 5"`
+- **Start Position** → `"1 2 N"`
+- **Commands** → `"RFRFFRFRF"`
+5. View the final **robot position**.
+
+### Running Unit Tests
+1. Open the test project in **Visual Studio**.
+2. Run:
+dotnet test
+3. Ensure **all tests pass**.
+
+## Git Repository Structure
+- `/src` - Main application code
+- `/tests` - Unit tests
+- `README.md` - Instructions & setup guide
+
+## Possible Enhancements
+🔹 **Logging Mechanism** for debugging  
+🔹 **Graphical Interface** for visualization  
+🔹 **More Test Cases** for edge scenarios  
+
+### **5. Git Setup Instructions**
+```sh
+# Initialize Git in your project directory
+git init
+
+# Add files to the repository
+git add .
+
+# Commit the initial implementation
+git commit -m "Initial commit - Robot Controller"
+
+# Create a GitHub repository and add the remote
+git remote add origin <repository-url>
+
+# Push the code to GitHub
+git push -u origin main
+
+
+
+
+
+>>>>>>> 976d6b0fdecd3737911229dfe8d31ca3c896623e
 
 It’s a simple robot that can walk around in a room where the floor is represented as a number of fields in a
 wire mesh. Input is first two numbers, which tells the robot how big the room is:
@@ -60,6 +131,7 @@ Report: 1 3 N
 RFLFFLRF
 Report: 3 1 E
 
+<<<<<<< HEAD
 ## Error Handling
 
 - Throws `ArgumentException` for invalid commands or directions.
@@ -79,6 +151,8 @@ Pull requests are welcome. For major changes, please open an issue first.
 
 This project is licensed under the MIT License.
 
+=======
+>>>>>>> 976d6b0fdecd3737911229dfe8d31ca3c896623e
 
 
 
