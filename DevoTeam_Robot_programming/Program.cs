@@ -51,12 +51,19 @@ namespace DevoTeam_Robot_programming
         {
             foreach (char command in commands)
             {
+                if (command != 'L' && command != 'R' && command != 'F')
+                {
+                    throw new ArgumentException($"Invalid command: {command}");
+                }
+            }
+
+            foreach (char command in commands)
+            {
                 switch (command)
                 {
                     case 'L': TurnLeft(); break;
                     case 'R': TurnRight(); break;
                     case 'F': MoveForward(); break;
-                    default: throw new ArgumentException($"Invalid command: {command}");
                 }
             }
             return $"Report: {x} {y} {direction}";
