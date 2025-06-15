@@ -1,5 +1,5 @@
-# DevoTeam.Robotics
-DevoTeam.Robotics - Robot Controller in C#
+# DevoTeam_Robot_programming
+DevoTeam_Robot_programming - Robot Controller in C#
 
 A C# solution for simulating a robot moving on a 2D grid, with robust movement logic and error handling. The robot can turn left/right, move forward, and reports its position and direction. The project includes unit tests for all core behaviors.
 
@@ -14,7 +14,7 @@ A C# solution for simulating a robot moving on a 2D grid, with robust movement l
 
 - .NET Framework 4.7.2 or .NET 8 (depending on project)
 - Visual Studio 2019 or later recommended
-- xUnit** for unit testing
+- xUnit for unit testing
 
 ## Getting Started
 
@@ -31,8 +31,8 @@ Use __Build Solution__ (`Ctrl+Shift+B`).
 - Click __Run All__
 
 ## Git Repository Structure
-- `/src` - Main application code
-- `/tests` - Unit tests
+- `/DevoTeam_Robot_programming` - Main application code
+- `/DevoTeam_Robot_Programming.Tests` - Unit tests
 - `README.md` - Instructions & setup guide
 
 ## Possible Enhancements
@@ -40,63 +40,30 @@ Use __Build Solution__ (`Ctrl+Shift+B`).
 🔹 **Graphical Interface** for visualization  
 🔹 **More Test Cases** for edge scenarios  
 
-
 ## Usage Example
-=======
-## Overview
 
-It’s a simple robot that can walk around in a room where the floor is represented as a number of fields in a
-wire mesh. Input is first two numbers, which tells the robot how big the room is:
-5 7
-Which means that the room is 5 fields wide and is 7 fields deep.
-The size of the room follows two digits and one letter indicating the starting
-position of the robot and its orientation in space. For example:
-1
-3 3 N
-Which means that the robot is in field (3, 3) and faces north. Subsequently, the
-robot receives a number of navigation commands in the form of characters. The
-following commands shall be implemented:
-• L Turn left
-• R Turn right
-• F Walk forward
-Example:
-LFFRFRFRFF
-If the robot walks outside of the room bounds an appropriate the program should
-exit with an error code.
-After the last command is received, the robot must report which field it is in
-and what direction it is facing.
-Example:
-5 5
-1 2 N
-RFRFFRFRF
-Report: 1 3 N
-5 5
-0 0 E
-RFLFFLRF
-Report: 3 1 E
+### Parameters
 
+- **Grid Size:**  
+  The grid is defined by its width and height (e.g., `5 5` for a 5x5 grid).
 
+- **Starting Position:**  
+  The robot's initial position and direction are specified as:  
+  `<X> <Y> <Direction>`  
+  Example: `1 2 N` (X=1, Y=2, facing North)  
+  Directions:  
+    - `N` = North  
+    - `E` = East  
+    - `S` = South  
+    - `W` = West  
 
-## Error Handling
+- **Commands:**  
+  A string of characters, each representing an action:  
+    - `L` = Turn left  
+    - `R` = Turn right  
+    - `F` = Move forward  
 
-- Throws `ArgumentException` for invalid commands or directions.
-- Throws `InvalidOperationException` if the robot moves out of bounds.
-- Throws `ArgumentNullException` if command string is null.
-
-## Project Structure
-
-- `DevoTeamRobot` - Main robot logic
-- `DevoTeamRobot.Tests` - Unit tests for all behaviors
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first.
-
-## License
-
-This project is licensed under the MIT License.
-
-=======
+### Example
 
 
 
