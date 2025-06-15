@@ -84,22 +84,59 @@ namespace DevoTeam_Robot_programming
         // Entry point for the application
         static void Main()
         {
-            Console.WriteLine("Enter room width and depth:");
-            string[] roomSize = Console.ReadLine().Split();
-            int roomWidth = int.Parse(roomSize[0]), roomDepth = int.Parse(roomSize[1]);
+            while (true)
+            {
+                try
+                {
+                    // Room size input and validation
+                    Console.WriteLine("Enter room width and depth:");
+                    string[] roomSize = Console.ReadLine().Split();
+                    if (roomSize.Length != 2 ||
+                        !int.TryParse(roomSize[0], out int roomWidth) ||
+                        !int.TryParse(roomSize[1], out int roomDepth) ||
+                        roomWidth <= 0 || roomDepth <= 0)
+                    {
+                        Console.WriteLine("Invalid room size. Please enter two positive integers.");
+                        continue;
+                    }
 
-            Console.WriteLine("Enter starting position (X Y Direction):");
-            string[] startPosition = Console.ReadLine().Split();
-            int startX = int.Parse(startPosition[0]);
-            int startY = int.Parse(startPosition[1]);
-            char startDirection = char.Parse(startPosition[2]);
+                    // Starting position input and validation
+                    Console.WriteLine("Enter starting position (X Y Direction):");
+                    string[] startPosition = Console.ReadLine().Split();
+                    if (startPosition.Length != 3 ||
+                        !int.TryParse(startPosition[0], out int startX) ||
+                        !int.TryParse(startPosition[1], out int startY) ||
+                        !char.TryParse(startPosition[2], out char startDirection) ||
+                        "NESW".IndexOf(startDirection) == -1)
+                    {
+                        Console.WriteLine("Invalid starting position. Please enter two integers and a direction (N, E, S, W).");
+                        continue;
+                    }
 
-            Console.WriteLine("Enter navigation commands:");
-            string commands = Console.ReadLine();
+                    // Command input
+                    Console.WriteLine("Enter navigation commands:");
+                    string commands = Console.ReadLine();
 
-            // Create a robot and execute the commands
-            Robot robot = new Robot(startX, startY, startDirection, roomWidth, roomDepth);
-            Console.WriteLine(robot.ExecuteCommands(commands));
+                    // Create a robot and execute the commands
+                    Robot robot = new Robot(startX, startY, startDirection, roomWidth, roomDepth);
+                    Console.WriteLine(robot.ExecuteCommands(commands));
+                    break; // Success, exit loop
+                }
+                catch (ArgumentException ex)
+                {
+                    Console.WriteLine("Argument error: " + ex.Message);
+                }
+                catch (InvalidOperationException ex)
+                {
+                    Console.WriteLine("Operation error: " + ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Unexpected error: " + ex.Message);
+                }
+
+                Console.WriteLine("Please try again.\n");
+            }
         }
     }
 }
