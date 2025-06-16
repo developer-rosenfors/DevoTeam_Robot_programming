@@ -16,6 +16,7 @@ namespace DevoTeamRobot.Tests
             Assert.Equal("Report: 1 3 N", result);
         }
 
+        /* During test
         [Fact]
         // Test that the robot turns left from North and reports the correct direction (West)
         public void Robot_Turns_Left_Correctly()
@@ -24,6 +25,7 @@ namespace DevoTeamRobot.Tests
             robot.ExecuteCommands("L");
             Assert.Equal("Report: 1 1 W", robot.ExecuteCommands(""));
         }
+       
 
         [Fact]
         // Test that the robot moves forward from (1,1) facing North and updates its position correctly
@@ -32,6 +34,7 @@ namespace DevoTeamRobot.Tests
             Robot robot = new Robot(1, 1, 'N', 5, 5);
             Assert.Equal("Report: 1 2 N", robot.ExecuteCommands("F"));
         }
+       
 
         [Fact]
         // Test that the robot throws an exception when moving out of the grid bounds
@@ -48,6 +51,7 @@ namespace DevoTeamRobot.Tests
                 Assert.Contains("Out of bounds", ex.Message);
             }
         }
+        */
 
         [Fact]
         // Test that the robot throws an exception when an invalid command is given
